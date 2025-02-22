@@ -36,7 +36,7 @@
 //! Since a mutex only requires 2 bits, it can share space with other data.
 //! For example, one could create an `ArcMutex` type that combines the atomic
 //! reference count and the two mutex bits in the same atomic word.
-
+#![feature(stdarch_wasm_atomic_wait)]
 #![warn(missing_docs)]
 #![warn(rust_2018_idioms)]
 #![cfg_attr(
