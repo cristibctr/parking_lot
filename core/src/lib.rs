@@ -49,7 +49,6 @@
         target_family = "wasm",
         target_feature = "atomics"
     ),
-    feature(stdsimd)
 )]
 
 mod parking_lot;
