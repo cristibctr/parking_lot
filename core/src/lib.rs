@@ -36,20 +36,14 @@
 //! Since a mutex only requires 2 bits, it can share space with other data.
 //! For example, one could create an `ArcMutex` type that combines the atomic
 //! reference count and the two mutex bits in the same atomic word.
-#![feature(stdarch_wasm_atomic_wait)]
+// #![feature(stdarch_wasm_atomic_wait)]
 #![warn(missing_docs)]
 #![warn(rust_2018_idioms)]
 #![cfg_attr(
     all(target_env = "sgx", target_vendor = "fortanix"),
     feature(sgx_platform)
 )]
-#![cfg_attr(
-    all(
-        feature = "nightly",
-        target_family = "wasm",
-        target_feature = "atomics"
-    ),
-)]
+
 
 mod parking_lot;
 mod spinwait;
