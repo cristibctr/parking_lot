@@ -8,7 +8,7 @@
 //! This library provides implementations of `Mutex`, `RwLock`, `Condvar` and
 //! `Once` that are smaller, faster and more flexible than those in the Rust
 //! standard library. It also provides a `ReentrantMutex` type.
-// #![feature(stdarch_wasm_atomic_wait)]
+#![feature(stdarch_wasm_atomic_wait)]
 #![warn(missing_docs)]
 #![warn(rust_2018_idioms)]
 
